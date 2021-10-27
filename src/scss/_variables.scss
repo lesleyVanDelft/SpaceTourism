@@ -1,6 +1,6 @@
 //Heading font
 @import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
-$headingFont: 'Bellefair, serif';
+$headingFont: Bellefair, serif;
 $headingFontSize1: 9.375rem;
 $headingFontSize2: 6.25rem;
 $headingFontSize3: 3.5rem;
@@ -9,13 +9,13 @@ $headingFontSize5: 1.75rem;
 
 //Subheading font
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
-$subheadingFont: 'Barlow Condensed, sans-serif';
+$subheadingFont: Barlow Condensed, sans-serif;
 $subheadingFontSize: 28px;
 $subheadingFontSize2: 14px;
 
 //Body text
 @import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&display=swap');
-$bodyFont: 'Barlow, sans-serif';
+$bodyFont: Barlow, sans-serif;
 
 // Main Colors
 $mainDark: hsl(230, 35%, 7%);

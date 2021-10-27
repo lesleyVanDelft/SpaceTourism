@@ -1,18 +1,53 @@
+@import '../../scss/variables';
+
 .Navigation {
 	width: 15.875rem;
 	height: 100%;
-	background: teal;
-	position: absolute;
-	right: -100%;
-	padding: 1.5rem;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(15.5px);
+	-webkit-backdrop-filter: blur(5.5px);
 
-	a {
-		text-decoration: none;
+	position: absolute;
+	right: 0%;
+
+	.close {
+		position: absolute;
+		right: 1.625rem;
+		top: 2.125rem;
 	}
 
 	&__list {
+		color: $mainLight;
 		display: flex;
 		flex-direction: column;
+		font-family: $subheadingFont;
+		font-size: 1.1rem;
 		list-style: none;
+		margin-top: 7rem;
+		padding-left: 2rem;
+		a {
+			text-decoration: none;
+			color: inherit;
+			text-transform: uppercase;
+		}
+
+		.listNumber {
+			font-weight: bold;
+			margin-right: 0.6875rem;
+		}
+
+		&.active {
+			right: 0%;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.Navigation {
+		position: static;
+
+		.close {
+			display: none;
+		}
 	}
 }

@@ -15,6 +15,11 @@
 		font-size: $headingFontSize2;
 		color: $mainLight;
 	}
+
+	.hamburger {
+		position: absolute;
+		right: 0;
+	}
 }
 
 // tablets
