@@ -1,18 +1,27 @@
 @import '../../scss/variables';
 
 .Navigation {
-	height: 100%;
-	width: 100%;
+	&__logo {
+		img {
+			width: 40px;
+			height: 40px;
+		}
+	}
 
 	&__icons {
-		position: absolute;
-		z-index: 10;
-		right: 0;
+		// position: absolute;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		img {
+			z-index: 10;
+		}
 	}
 
 	&__list {
 		background: rgba(255, 255, 255, 0.1);
-		backdrop-filter: blur(15.5px);
+		backdrop-filter: blur(25.5px);
 		-webkit-backdrop-filter: blur(5.5px);
 		display: flex;
 		flex-direction: column;
@@ -26,9 +35,11 @@
 		width: 15.875rem;
 		height: 100%;
 		transition: 0.3s all ease-in-out;
+		padding-top: 7.5rem;
 
 		li {
 			color: $mainLight;
+			margin-bottom: 2rem;
 		}
 		a {
 			text-decoration: none;
@@ -41,12 +52,16 @@
 			height: 19.09px;
 			margin-left: auto;
 		}
-		&__icons {
-		}
 
 		.listNumber {
 			font-weight: bold;
 			margin-right: 0.6875rem;
+			letter-spacing: 2.7px;
+		}
+
+		.listText {
+			font-weight: lighter;
+			letter-spacing: 2.7px;
 		}
 
 		&.active {
