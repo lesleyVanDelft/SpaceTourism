@@ -1,9 +1,11 @@
 import './Navigation.css';
 import { Link } from 'react-router-dom';
+import close from '../../assets/shared/icon-close.svg';
 
 const Navigation = () => {
 	return (
 		<nav className="Navigation">
+			<img src={close} alt="close icon" className="close" />
 			<ul className="Navigation__list">
 				<li>
 					<Link to="/">

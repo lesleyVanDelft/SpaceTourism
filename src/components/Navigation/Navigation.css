@@ -1,1 +1,1 @@
-.Navigation{width:15.875rem;height:100%;background:teal}.Navigation__list{display:flex;flex-direction:column}
+.Navigation{width:15.875rem;height:100%;background:teal;position:absolute;right:-100%;padding:1.5rem}.Navigation a{text-decoration:none}.Navigation__list{display:flex;flex-direction:column;list-style:none}

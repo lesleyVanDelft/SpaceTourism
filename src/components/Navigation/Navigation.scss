@@ -2,9 +2,17 @@
 	width: 15.875rem;
 	height: 100%;
 	background: teal;
+	position: absolute;
+	right: -100%;
+	padding: 1.5rem;
+
+	a {
+		text-decoration: none;
+	}
 
 	&__list {
 		display: flex;
 		flex-direction: column;
+		list-style: none;
 	}
 }
