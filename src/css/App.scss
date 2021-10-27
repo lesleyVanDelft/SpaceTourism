@@ -1,0 +1,33 @@
+//Heading font
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+$headingFont: 'Bellefair, serif';
+$headingFontSize1: 9.375rem;
+$headingFontSize2: '6.25rem';
+$headingFontSize3: '3.5rem';
+$headingFontSize4: '2rem';
+$headingFontSize5: '1.75rem';
+
+//Subheading font
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+$subheadingFont: 'Barlow Condensed, sans-serif';
+$subheadingFontSize: '28px';
+$subheadingFontSize2: '14px';
+
+//Body text
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&display=swap');
+$bodyFont: 'Barlow, sans-serif';
+
+// Main Colors
+$mainDark: hsl(230, 35%, 7%);
+
+// Bootstrap grid import
+@import '../../node_modules/bootstrap/scss/bootstrap-grid.scss';
+
+body,
+html {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}

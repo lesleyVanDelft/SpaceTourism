@@ -1,0 +1,10 @@
+.Navigation {
+	width: 15.875rem;
+	height: 100%;
+	background: teal;
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+	}
+}
