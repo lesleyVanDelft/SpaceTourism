@@ -27,7 +27,7 @@ const Navigation = () => {
 			</div>
 
 			<ul className={`Navigation__list ${active ? 'active' : null}`}>
-				<li>
+				<li className={'active'}>
 					<Link to="/">
 						<span className="listNumber">00</span>
 						<span className="listText">Home</span>

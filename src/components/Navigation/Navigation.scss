@@ -17,6 +17,8 @@
 		img {
 			z-index: 10;
 		}
+		.toggle {
+		}
 	}
 
 	&__list {
@@ -36,7 +38,7 @@
 		height: 100%;
 		transition: 0.3s all ease-in-out;
 		padding-top: 7.5rem;
-
+		z-index: 9;
 		li {
 			color: $mainLight;
 			margin-bottom: 2rem;
@@ -72,10 +74,49 @@
 
 @media screen and (min-width: 768px) {
 	.Navigation {
-		position: static;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&__list {
+			position: static;
+			display: flex;
+			width: 28.125rem;
+			height: 6rem;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-around;
+			padding: 0;
+			margin: 0;
 
-		.close {
+			li {
+				margin: 0;
+				font-size: 14px;
+
+				&.active {
+					position: relative;
+					&::before {
+						content: '';
+						position: absolute;
+						height: 2px;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						background: white;
+					}
+				}
+			}
+		}
+
+		.listNumber {
 			display: none;
+		}
+		&__icons {
+			.logo {
+				padding-left: 39px;
+			}
+			.toggle {
+				display: none;
+			}
 		}
 	}
 }
