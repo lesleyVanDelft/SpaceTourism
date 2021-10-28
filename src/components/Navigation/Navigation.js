@@ -34,7 +34,7 @@ const Navigation = () => {
 					</Link>
 				</li>
 				<li>
-					<Link to="/">
+					<Link to="/destination">
 						<span className="listNumber">01</span>
 						<span className="listText">Destination</span>
 					</Link>

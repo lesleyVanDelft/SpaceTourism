@@ -1,3 +1,4 @@
+@import './scss/variables';
 // Bootstrap grid import
 @import '../node_modules/bootstrap/scss/bootstrap-grid.scss';
 
@@ -22,4 +23,16 @@ html {
 	width: 100%;
 	max-width: 1440px;
 	margin: 0 auto;
+}
+
+.Heading {
+	font-family: $subheadingFont;
+	color: $mainLight;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 2.7px;
+	&__number {
+		margin-right: 1.125rem;
+		opacity: 0.5;
+	}
 }
