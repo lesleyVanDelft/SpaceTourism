@@ -58,6 +58,39 @@
 			}
 		}
 	}
+	.PlanetTitle {
+		font-size: 3.5rem;
+		font-family: $headingFont;
+		color: $mainLight;
+		font-weight: lighter;
+		text-transform: uppercase;
+		text-align: center;
+		margin-top: 1.25rem;
+	}
+
+	.TravelInfo {
+		text-align: center;
+		margin-top: 1.5rem;
+		h3 {
+			font-family: $subheadingFont;
+			color: $mainGray;
+			font-size: 0.875rem;
+			letter-spacing: 0.1475rem;
+			font-weight: lighter;
+			margin-bottom: 12px;
+		}
+		h2 {
+			font-family: $headingFont;
+			font-size: 1.75rem;
+			font-weight: lighter;
+			color: $mainLight;
+			text-transform: uppercase;
+		}
+
+		.distance {
+			margin-bottom: 1.5rem;
+		}
+	}
 }
 
 @media screen and (min-width: 768px) {

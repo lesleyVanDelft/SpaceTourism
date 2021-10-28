@@ -13,10 +13,10 @@ const Destination = () => {
 	return (
 		<div className="Destination">
 			<Navigation />
-			<div className="Heading">
+			<header className="Heading">
 				<span className="Heading__number">01</span>
 				<span className="Heading__text">Pick your Destination</span>
-			</div>
+			</header>
 
 			<div className="planetImg">
 				{destinations.map((planet, i) => {
@@ -50,10 +50,36 @@ const Destination = () => {
 					</li>
 				</ul>
 			</div>
-			{/* {destinations.map((planet, i) => {
-				{
-				}
-			})} */}
+
+			<h1 className="PlanetTitle">{active}</h1>
+
+			{destinations.map((planet, i) => {
+				return planet.name === active ? (
+					<p className="BodyText" key={i}>
+						{planet.description}
+					</p>
+				) : null;
+			})}
+
+			<div className="TravelInfo">
+				<div className="distance">
+					<h3>Avg. Distance</h3>
+					{destinations.map((planet, i) => {
+						return planet.name === active ? (
+							<h2 key={i}>{planet.distance}</h2>
+						) : null;
+					})}
+				</div>
+
+				<div className="time">
+					<h3>Est. Travel Time</h3>
+					{destinations.map((planet, i) => {
+						return planet.name === active ? (
+							<h2 key={i}>{planet.travel}</h2>
+						) : null;
+					})}
+				</div>
+			</div>
 		</div>
 	);
 };
