@@ -18,19 +18,15 @@ const Crew = () => {
 			</header>
 
 			<main className="Crew__content">
-				<h1>IMG PLACEHOLDER</h1>
-
-				{crew.map((member, i) => {
-					return active === i ? (
-						<div key={i}>
-							<h3 className="HeadingSm">{member.role}</h3>
-							<h2 className="HeadingMd">{member.name}</h2>
-						</div>
-					) : null;
-				})}
+				<div className="image">
+					{crew.map((member, i) => {
+						return active === i ? (
+							<img src={member.images.png} key={i} alt="" />
+						) : null;
+					})}
+				</div>
 
 				<ul className="slider">
-					<h1>hello</h1>
 					<li
 						className={`slider__indicator ${active === 0 ? 'active' : null}`}
 						value="0"
@@ -56,6 +52,18 @@ const Crew = () => {
 						<span></span>
 					</li>
 				</ul>
+
+				<div className="text">
+					{crew.map((member, i) => {
+						return active === i ? (
+							<div key={i}>
+								<h3 className="HeadingSm">{member.role}</h3>
+								<h2 className="HeadingMd">{member.name}</h2>
+								<p className="BodyText">{member.bio}</p>
+							</div>
+						) : null;
+					})}
+				</div>
 			</main>
 		</div>
 	);

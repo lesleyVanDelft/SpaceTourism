@@ -11,16 +11,32 @@
 
 	&__content {
 		text-align: center;
+		.image {
+			padding-top: 2rem;
+			img {
+				height: 222px;
+				width: auto;
+				margin-bottom: -4px;
+			}
+		}
+		.text {
+			.BodyText {
+				border: none;
+			}
+		}
+
 		.slider {
 			display: flex;
 			list-style: none;
 			justify-content: center;
+			border-top: 1px solid rgba(255, 255, 255, 0.3);
+			padding: 2rem;
 			&__indicator {
-				height: 14px;
-				width: 14px;
+				height: 12px;
+				width: 12px;
 				border-radius: 50vw;
 				background: white;
-				margin-right: 1rem;
+				margin-right: 1.4rem;
 				opacity: 0.3;
 
 				&:last-child {
@@ -40,6 +56,31 @@
 		background: url('../../assets/crew/background-crew-tablet.jpg') no-repeat
 			center center / cover;
 		padding: 0;
+		// width: 100%;
+
+		&__content {
+			display: flex;
+			flex-direction: column-reverse;
+			justify-content: center;
+			align-items: center;
+			.text {
+				width: 458px;
+				height: 232px;
+				margin-top: 3.75rem;
+			}
+			.image {
+				height: 560px;
+				img {
+					height: 100%;
+					width: 100%;
+				}
+			}
+
+			.slider {
+				border: none;
+				padding: 0;
+			}
+		}
 	}
 }
 @media screen and (min-width: 1200px) {
