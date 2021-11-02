@@ -26,6 +26,7 @@
 		width: 14.8438rem;
 		height: 1.75rem;
 		margin: 0 auto;
+		font-size: 14px;
 		ul {
 			display: flex;
 			width: 100%;
@@ -41,6 +42,7 @@
 			letter-spacing: 2.36px;
 			font-weight: lighter;
 			opacity: 0.7;
+			cursor: pointer;
 
 			&.active {
 				position: relative;
@@ -71,6 +73,7 @@
 	.TravelInfo {
 		text-align: center;
 		margin-top: 1.5rem;
+		text-transform: uppercase;
 		h3 {
 			font-family: $subheadingFont;
 			color: $mainGray;
@@ -84,7 +87,6 @@
 			font-size: 1.75rem;
 			font-weight: lighter;
 			color: $mainLight;
-			text-transform: uppercase;
 		}
 
 		.distance {
@@ -97,6 +99,33 @@
 	.Destination {
 		background: url('../../assets/destination/background-destination-tablet.jpg')
 			no-repeat center center / cover;
+		padding: 0;
+
+		.planetImg {
+			margin-bottom: 3.3125rem;
+			img {
+				width: 18.75rem;
+				height: 18.75rem;
+			}
+		}
+
+		&__planetNames {
+			font-size: 1rem;
+			margin-bottom: 2rem;
+		}
+		.PlanetTitle {
+			font-size: 5rem;
+			margin-bottom: 1.2125rem;
+		}
+		.BodyText {
+			font-size: 1rem;
+		}
+		.TravelInfo {
+			display: flex;
+			justify-content: space-around;
+			padding: 0 7rem;
+			padding-top: 1.8125rem;
+		}
 	}
 }
 
@@ -104,5 +133,47 @@
 	.Destination {
 		background: url('../../assets/destination/background-destination-desktop.jpg')
 			no-repeat center center / cover;
+		padding-top: 40px;
+
+		.planetImg {
+			margin: 0;
+			img {
+				height: 27.8125rem;
+				width: 27.8125rem;
+			}
+		}
+		&__planetNames {
+			margin: 0;
+		}
+		.PlanetTitle {
+			font-size: 6.25rem;
+		}
+		.BodyText {
+			font-size: 1.125rem;
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
+
+		&__textContainer {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		&__content {
+			display: flex;
+			justify-content: space-around;
+		}
+		.TravelInfo {
+			// display: flex;
+			// justify-content: space-between;
+			padding-left: 0;
+			padding-right: 0;
+			// width: 50%;
+			text-align: left;
+
+			.distance {
+				margin-right: 4.9375rem;
+			}
+		}
 	}
 }
