@@ -26,43 +26,43 @@ const Crew = () => {
 					})}
 				</div>
 
-				<ul className="slider">
-					<li
-						className={`slider__indicator ${active === 0 ? 'active' : null}`}
-						value="0"
-						onClick={getActiveState}>
-						<span></span>
-					</li>
-					<li
-						className={`slider__indicator ${active === 1 ? 'active' : null}`}
-						value="1"
-						onClick={getActiveState}>
-						<span></span>
-					</li>
-					<li
-						className={`slider__indicator ${active === 2 ? 'active' : null}`}
-						value="2"
-						onClick={getActiveState}>
-						<span></span>
-					</li>
-					<li
-						className={`slider__indicator ${active === 3 ? 'active' : null}`}
-						value="3"
-						onClick={getActiveState}>
-						<span></span>
-					</li>
-				</ul>
-
 				<div className="text">
 					{crew.map((member, i) => {
 						return active === i ? (
-							<div key={i}>
+							<div key={i} className="text__content">
 								<h3 className="HeadingSm">{member.role}</h3>
 								<h2 className="HeadingMd">{member.name}</h2>
 								<p className="BodyText">{member.bio}</p>
 							</div>
 						) : null;
 					})}
+
+					<ul className="slider">
+						<li
+							className={`slider__indicator ${active === 0 ? 'active' : null}`}
+							value="0"
+							onClick={getActiveState}>
+							<span></span>
+						</li>
+						<li
+							className={`slider__indicator ${active === 1 ? 'active' : null}`}
+							value="1"
+							onClick={getActiveState}>
+							<span></span>
+						</li>
+						<li
+							className={`slider__indicator ${active === 2 ? 'active' : null}`}
+							value="2"
+							onClick={getActiveState}>
+							<span></span>
+						</li>
+						<li
+							className={`slider__indicator ${active === 3 ? 'active' : null}`}
+							value="3"
+							onClick={getActiveState}>
+							<span></span>
+						</li>
+					</ul>
 				</div>
 			</main>
 		</div>

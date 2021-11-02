@@ -5,10 +5,15 @@
 	width: 100%;
 	background: url('../../assets/destination/background-destination-mobile.jpg')
 		no-repeat center center / cover;
-	padding: 1.5rem;
+
 	margin: 0;
 	position: relative;
 	overflow-x: hidden;
+
+	&__content {
+		padding: 0 1.5rem 0 1.5rem;
+		// margin-bottom: 1rem;
+	}
 
 	.planetImg {
 		margin-top: 2rem;
@@ -74,6 +79,7 @@
 		text-align: center;
 		margin-top: 1.5rem;
 		text-transform: uppercase;
+		padding-bottom: 1.5rem;
 		h3 {
 			font-family: $subheadingFont;
 			color: $mainGray;

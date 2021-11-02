@@ -1,0 +1,81 @@
+@import '../../scss/variables';
+
+.Technology {
+	height: 100%;
+	width: 100%;
+	background: url('../../assets/technology/background-technology-mobile.jpg')
+		no-repeat center center / cover;
+	position: relative;
+	overflow-x: hidden;
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		.Heading {
+			font-weight: lighter;
+			opacity: 0.7;
+		}
+		.BodyText {
+			border: none;
+		}
+		.image {
+			width: 100%;
+			height: 170px;
+			margin-top: 2rem;
+
+			img {
+				height: 100%;
+				width: 101%;
+				background: no-repeat center center / cover;
+			}
+		}
+
+		.text {
+			padding: 1.5rem;
+
+			&__content {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+
+				.HeadingMd {
+					font-size: 1.5rem;
+				}
+			}
+			.numberList {
+				display: flex;
+				width: 100%;
+				list-style: none;
+				justify-content: center;
+				align-items: center;
+
+				li {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					font-family: $headingFont;
+					font-size: 1rem;
+					font-weight: lighter;
+					letter-spacing: 1px;
+					border: 1px solid rgba(255, 255, 255, 0.3);
+					width: 40px;
+					height: 40px;
+					border-radius: 50vh;
+					color: $mainLight;
+					margin-right: 1.5rem;
+
+					&:last-child {
+						margin: 0;
+					}
+
+					&.active {
+						background: $mainLight;
+						color: #000;
+					}
+				}
+			}
+		}
+	}
+}

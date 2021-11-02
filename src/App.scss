@@ -68,6 +68,8 @@ html {
 	font-weight: lighter;
 	padding-bottom: 2rem;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	padding-left: 2rem;
+	padding-right: 2rem;
 }
 
 @media screen and(min-width: 768px) {
@@ -100,6 +102,15 @@ html {
 	.Heading {
 		font-size: 1.75rem;
 		padding-bottom: 4rem;
+		padding-left: 10.375rem;
+	}
+
+	.HeadingSm {
+		font-size: 2rem;
+	}
+
+	.HeadingMd {
+		font-size: 3.5rem;
 	}
 
 	.BodyText {
