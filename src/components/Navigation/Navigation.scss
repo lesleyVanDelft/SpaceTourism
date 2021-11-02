@@ -90,18 +90,16 @@
 				margin: 0;
 				font-size: 14px;
 
-				&.active {
-					a {
-						position: relative;
-						&::before {
-							content: '';
-							position: absolute;
-							height: 4px;
-							left: 0;
-							right: 0;
-							bottom: -100%;
-							background: white;
-						}
+				a.active {
+					position: relative;
+					&::before {
+						content: '';
+						position: absolute;
+						height: 4px;
+						left: 0;
+						right: 0;
+						bottom: -100%;
+						background: white;
 					}
 				}
 			}

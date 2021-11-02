@@ -1,5 +1,5 @@
 import './Navigation.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import close from '../../assets/shared/icon-close.svg';
 import hamburger from '../../assets/shared/icon-hamburger.svg';
@@ -15,9 +15,9 @@ const Navigation = () => {
 	return (
 		<nav className="Navigation">
 			<div className="Navigation__icons">
-				<Link to="/">
+				<NavLink to="/">
 					<img src={logo} alt="Navigation__logo" className="logo" />
-				</Link>
+				</NavLink>
 				<img
 					src={`${active ? close : hamburger}`}
 					alt="navigation icon"
@@ -27,29 +27,29 @@ const Navigation = () => {
 			</div>
 
 			<ul className={`Navigation__list ${active ? 'active' : null}`}>
-				<li className={'active'}>
-					<Link to="/">
+				<li>
+					<NavLink exact to="/" activeClassName="active">
 						<span className="listNumber">00</span>
 						<span className="listText">Home</span>
-					</Link>
+					</NavLink>
 				</li>
 				<li>
-					<Link to="/destination">
+					<NavLink to="/destination" activeClassName="active">
 						<span className="listNumber">01</span>
 						<span className="listText">Destination</span>
-					</Link>
+					</NavLink>
 				</li>
 				<li>
-					<Link to="/">
+					<NavLink to="/crew" activeClassName="active">
 						<span className="listNumber">02</span>
 						<span className="listText">Crew</span>
-					</Link>
+					</NavLink>
 				</li>
 				<li>
-					<Link to="/">
+					<NavLink to="/technology" activeClassName="active">
 						<span className="listNumber">03</span>
 						<span className="listText">Technology</span>
-					</Link>
+					</NavLink>
 				</li>
 			</ul>
 		</nav>
