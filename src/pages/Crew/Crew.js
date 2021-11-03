@@ -2,6 +2,7 @@ import './Crew.css';
 import { crew } from '../../data.json';
 import { useState } from 'react';
 import Navigation from '../../components/Navigation/Navigation';
+import { useSwipeable } from 'react-swipeable';
 const Crew = () => {
 	const [active, setActive] = useState(0);
 
@@ -9,8 +10,19 @@ const Crew = () => {
 		setActive(e.target.value);
 	};
 
+	const handlers = useSwipeable({
+		onSwipedLeft: () => {
+			return active < 3 ? setActive(active + 1) : setActive(0);
+		},
+		onSwipedRight: () => {
+			return active === 0 ? setActive(3) : setActive(active - 1);
+		},
+		delta: 10,
+		preventDefaultTouchmoveEvent: true,
+	});
+
 	return (
-		<div className="Crew">
+		<div className="Crew" {...handlers}>
 			<Navigation />
 			<header className="Heading">
 				<span className="Heading__number">02</span>

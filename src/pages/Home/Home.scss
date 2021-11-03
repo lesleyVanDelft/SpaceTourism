@@ -67,9 +67,11 @@
 			center center / cover;
 
 		padding: 0;
+		padding-bottom: 2rem;
 
 		&__content {
 			padding: 50px 159px 0 159px;
+			margin-top: 0;
 
 			h2 {
 				font-size: 1.25rem;
@@ -81,6 +83,7 @@
 				font-size: 1rem;
 				padding: 0 15px;
 			}
+
 			.cta {
 				height: 242px;
 				width: 242px;
@@ -108,6 +111,7 @@
 			justify-content: space-between;
 			margin: 0;
 			text-align: left;
+			padding-top: 0;
 			.text {
 				max-width: 450px;
 

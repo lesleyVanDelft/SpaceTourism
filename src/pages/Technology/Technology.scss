@@ -7,6 +7,7 @@
 		no-repeat center center / cover;
 	position: relative;
 	overflow-x: hidden;
+	padding-top: 40px;
 	&__content {
 		display: flex;
 		flex-direction: column;
@@ -24,10 +25,10 @@
 			height: 170px;
 			margin-top: 2rem;
 
-			img {
+			.img {
 				height: 100%;
-				width: 101%;
-				background: no-repeat center center / cover;
+				width: 100%;
+				object-fit: cover;
 			}
 		}
 
@@ -50,6 +51,8 @@
 				list-style: none;
 				justify-content: center;
 				align-items: center;
+				margin-top: 1.25rem;
+				margin-bottom: 1.875rem;
 
 				li {
 					display: flex;
@@ -74,6 +77,119 @@
 						background: $mainLight;
 						color: #000;
 					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.Technology {
+		background: url('../../assets/technology/background-technology-tablet.jpg')
+			no-repeat center center / cover;
+		&__content {
+			width: 100%;
+
+			.image {
+				height: 310px;
+				width: 100%;
+				.img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+
+			.text {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				.numberList {
+					margin: 0;
+
+					li {
+						width: 60px;
+						height: 60px;
+						font-size: 1.5rem;
+					}
+				}
+				.Heading {
+					padding-left: 0;
+					font-size: 1rem;
+					text-align: center;
+				}
+				.HeadingMd {
+					font-size: 40px;
+				}
+				.BodyText {
+					padding-left: 4rem;
+					padding-right: 4rem;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.Technology {
+		background: url('../../assets/technology/background-technology-desktop.jpg')
+			no-repeat center center / cover;
+		&__content {
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: space-between;
+			.image {
+				width: auto;
+				height: auto;
+				.img {
+					display: none;
+				}
+				.imgPortrait {
+					display: block;
+				}
+			}
+
+			.text {
+				display: flex;
+				flex-direction: row;
+				padding: 0;
+				margin-right: 6.125rem;
+				// Text Content
+				&__content {
+					width: 470px;
+					align-items: flex-start;
+				}
+				.numberList {
+					display: flex;
+					flex-direction: column;
+					margin: 0 4.3rem 0 10.3125rem;
+					cursor: pointer;
+					li {
+						width: 80px;
+						height: 80px;
+						margin: 0 0 3.3125rem 0;
+						font-size: 2rem;
+
+						&:hover {
+							background: rgba(255, 255, 255, 0.3);
+						}
+					}
+				}
+				.Heading {
+					padding: 0;
+					margin: 0;
+					text-align: left;
+				}
+				.HeadingMd {
+					text-align: left;
+					font-size: 3.5rem;
+				}
+				.BodyText {
+					padding: 0;
+					max-width: auto;
+					text-align: left;
+					padding-right: 1.655rem;
 				}
 			}
 		}

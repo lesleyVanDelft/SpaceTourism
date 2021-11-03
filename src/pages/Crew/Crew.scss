@@ -67,8 +67,10 @@
 		&__content {
 			display: flex;
 			flex-direction: column-reverse;
-			justify-content: center;
+			justify-content: space-between;
 			align-items: center;
+			height: 80%;
+			margin-top: 5%;
 			.text {
 				width: 458px;
 				height: 232px;
@@ -76,14 +78,21 @@
 				margin-bottom: 20px;
 				flex-direction: column;
 
+				// Text content
 				&__content {
-					height: 100%;
-					width: 100%;
+					width: 458px;
+					height: 232px;
+
+					.BodyText {
+						padding-bottom: 0;
+					}
 				}
 			}
 			.image {
 				height: 560px;
 				border: none;
+				padding-top: 1.5rem;
+				margin: 0;
 				img {
 					height: 100%;
 					width: 100%;
@@ -93,7 +102,8 @@
 			.slider {
 				border: none;
 				padding: 0;
-
+				margin-bottom: 0;
+				align-items: flex-end;
 				li {
 					cursor: pointer;
 				}
@@ -117,13 +127,18 @@
 			align-items: center;
 			// padding: 0 calc(200px / 2);
 			padding: 0 150px;
+			padding-right: 135px;
 			text-align: left;
+			margin-top: 5rem;
+			height: 612px;
+
 			.image {
-				height: 727px;
+				height: 680px;
 				// height: 712px;
 				width: auto;
 				margin: 0;
 				padding: 0;
+				padding-top: 1rem;
 
 				img {
 					width: 100%;
@@ -136,8 +151,13 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			width: fit-content;
 
+			&__content {
+				width: 100%;
+				.HeadingMd {
+					width: 650px;
+				}
+			}
 			.BodyText {
 				text-align: left;
 				width: 444px;

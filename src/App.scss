@@ -1,6 +1,6 @@
 @import './scss/variables';
 // Bootstrap grid import
-@import '../node_modules/bootstrap/scss/bootstrap-grid.scss';
+// @import '../node_modules/bootstrap/scss/bootstrap-grid.scss';
 
 // General styling
 *,
@@ -68,8 +68,6 @@ html {
 	font-weight: lighter;
 	padding-bottom: 2rem;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-	padding-left: 2rem;
-	padding-right: 2rem;
 }
 
 @media screen and(min-width: 768px) {
@@ -81,7 +79,8 @@ html {
 	}
 
 	.HeadingSm {
-		font-size: 1.5rem;
+		font-size: 1rem;
+		letter-spacing: 2.7px;
 	}
 
 	.HeadingMd {
@@ -95,6 +94,8 @@ html {
 		max-width: 35.8125rem;
 		margin: 0 auto;
 		padding-bottom: 3.0625rem;
+		// padding-left: 2rem;
+		// padding-right: 2rem;
 	}
 }
 

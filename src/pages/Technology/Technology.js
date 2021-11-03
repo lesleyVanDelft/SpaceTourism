@@ -1,17 +1,34 @@
 import { useState } from 'react';
 import Navigation from '../../components/Navigation/Navigation';
 import { technology } from '../../data.json';
+import { useSwipeable } from 'react-swipeable';
+import { useMediaQuery } from 'react-responsive';
 import './Technology.css';
 
 const Technology = () => {
 	const [active, setActive] = useState(0);
 
+	const desktopScreen = useMediaQuery({
+		query: '(min-width: 1200px)',
+	});
+
 	const getActiveState = e => {
 		setActive(e.target.value);
 	};
 
+	const handlers = useSwipeable({
+		onSwipedLeft: () => {
+			return active < 2 ? setActive(active + 1) : setActive(0);
+		},
+		onSwipedRight: () => {
+			return active === 0 ? setActive(2) : setActive(active - 1);
+		},
+		delta: 10,
+		preventDefaultTouchmoveEvent: true,
+	});
+
 	return (
-		<div className="Technology">
+		<div className="Technology" {...handlers}>
 			<Navigation />
 			<header className="Heading">
 				<span className="Heading__number">03</span>
@@ -20,11 +37,36 @@ const Technology = () => {
 
 			<main className="Technology__content">
 				<div className="image">
-					{technology.map((tech, i) => {
-						return active === i ? (
-							<img src={tech.images.landscape} alt="" className="img" />
-						) : null;
-					})}
+					{desktopScreen &&
+						technology.map((tech, i) => {
+							return active === i ? (
+								<img
+									src={tech.images.portrait}
+									className="imgPortrait"
+									key={i}
+								/>
+							) : null;
+						})}
+
+					{desktopScreen ||
+						technology.map((tech, i) => {
+							return active === i ? (
+								<img src={tech.images.landscape} key={i} className="img" />
+							) : null;
+						})}
+
+					{/* {technology.map((tech, i) => {
+						// return active === i && desktopScreen === false ? (
+						// 	<img src={tech.images.landscape} alt="" className="img" key={i} />
+						// ) : (
+						// 	<img
+						// 		src={tech.images.portrait}
+						// 		alt=""
+						// 		className="imgPortrait"
+						// 		key={i}
+						// 	/>
+						// );
+					})} */}
 				</div>
 
 				<div className="text">
@@ -49,15 +91,17 @@ const Technology = () => {
 						</li>
 					</ul>
 
-					<h4 className="Heading">The Terminology...</h4>
-					{technology.map((tech, i) => {
-						return active === i ? (
-							<div className="text__content">
-								<h3 className="HeadingMd">{tech.name}</h3>
-								<p className="BodyText">{tech.description}</p>
-							</div>
-						) : null;
-					})}
+					<div>
+						<h4 className="Heading">The Terminology...</h4>
+						{technology.map((tech, i) => {
+							return active === i ? (
+								<div className="text__content" key={i}>
+									<h3 className="HeadingMd">{tech.name}</h3>
+									<p className="BodyText">{tech.description}</p>
+								</div>
+							) : null;
+						})}
+					</div>
 				</div>
 			</main>
 		</div>
