@@ -2,6 +2,7 @@ import './Destination.css';
 import { destinations } from '../../data.json';
 import Navigation from '../../components/Navigation/Navigation';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const Destination = () => {
 	const [active, setActive] = useState('Moon');
@@ -10,8 +11,24 @@ const Destination = () => {
 		setActive(e.target.innerHTML);
 	};
 
+	const variants = {
+		hidden: {
+			opacity: 0,
+		},
+		show: {
+			opacity: 1,
+			transition: {
+				duration: 0.75,
+			},
+		},
+	};
+
 	return (
-		<div className="Destination">
+		<motion.div
+			className="Destination"
+			variants={variants}
+			initial="hidden"
+			animate="show">
 			<Navigation />
 			<header className="Heading">
 				<span className="Heading__number">01</span>
@@ -84,7 +101,7 @@ const Destination = () => {
 					</div>
 				</div>
 			</main>
-		</div>
+		</motion.div>
 	);
 };
 

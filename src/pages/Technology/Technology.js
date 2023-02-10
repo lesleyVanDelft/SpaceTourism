@@ -4,6 +4,7 @@ import { technology } from '../../data.json';
 import { useSwipeable } from 'react-swipeable';
 import { useMediaQuery } from 'react-responsive';
 import './Technology.css';
+import { motion } from 'framer-motion';
 
 const Technology = () => {
 	const [active, setActive] = useState(0);
@@ -26,9 +27,25 @@ const Technology = () => {
 		delta: 10,
 		preventDefaultTouchmoveEvent: true,
 	});
+	const variants = {
+		hidden: {
+			opacity: 0,
+		},
+		show: {
+			opacity: 1,
+			transition: {
+				duration: 0.75,
+			},
+		},
+	};
 
 	return (
-		<div className="Technology" {...handlers}>
+		<motion.div
+			className="Technology"
+			{...handlers}
+			variants={variants}
+			initial="hidden"
+			animate="show">
 			<Navigation />
 			<header className="Heading">
 				<span className="Heading__number">03</span>
@@ -110,7 +127,7 @@ const Technology = () => {
 					</div>
 				</div>
 			</main>
-		</div>
+		</motion.div>
 	);
 };
 

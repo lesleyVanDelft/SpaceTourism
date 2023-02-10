@@ -15,14 +15,14 @@ const Home = () => {
 		},
 	};
 	return (
-		<motion.div className="Home">
+		<motion.div
+			className="Home"
+			variants={variants}
+			initial="hidden"
+			animate="show">
 			<Navigation />
 
-			<div
-				className="Home__content"
-				variants={variants}
-				initial="hidden"
-				animate="show">
+			<div className="Home__content">
 				<div className="text">
 					<h2>So, you want to travel to</h2>
 					<h1>SPACE</h1>

@@ -3,6 +3,8 @@ import { crew } from '../../data.json';
 import { useState } from 'react';
 import Navigation from '../../components/Navigation/Navigation';
 import { useSwipeable } from 'react-swipeable';
+import { motion } from 'framer-motion';
+
 const Crew = () => {
 	const [active, setActive] = useState(0);
 
@@ -21,8 +23,25 @@ const Crew = () => {
 		preventDefaultTouchmoveEvent: true,
 	});
 
+	const variants = {
+		hidden: {
+			opacity: 0,
+		},
+		show: {
+			opacity: 1,
+			transition: {
+				duration: 0.75,
+			},
+		},
+	};
+
 	return (
-		<div className="Crew" {...handlers}>
+		<motion.div
+			className="Crew"
+			{...handlers}
+			variants={variants}
+			initial="hidden"
+			animate="show">
 			<Navigation />
 			<header className="Heading">
 				<span className="Heading__number">02</span>
@@ -77,7 +96,7 @@ const Crew = () => {
 					</ul>
 				</div>
 			</main>
-		</div>
+		</motion.div>
 	);
 };
 
