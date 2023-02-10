@@ -2,11 +2,24 @@ import './Home.css';
 import Navigation from '../../components/Navigation/Navigation';
 
 const Home = () => {
+	const variants = {
+		hidden: {
+			opacity: 0,
+		},
+		show: {
+			opacity: 1,
+			transition: {
+				duration: 0.75,
+			},
+		},
+	};
 	return (
 		<div className="Home">
 			<Navigation />
 
-			<div className="Home__content">
+			<motion.div className="Home__content"variants={variants}
+			initial="hidden"
+			animate="show">
 				<div className="text">
 					<h2>So, you want to travel to</h2>
 					<h1>SPACE</h1>
@@ -19,7 +32,7 @@ const Home = () => {
 				</div>
 				<button className="cta">Explore</button>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

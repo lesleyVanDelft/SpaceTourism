@@ -44,6 +44,7 @@ const Technology = () => {
 									src={tech.images.portrait}
 									className="imgPortrait"
 									key={i}
+									alt="Images related to space launches in portrait"
 								/>
 							) : null;
 						})}
@@ -51,7 +52,12 @@ const Technology = () => {
 					{desktopScreen ||
 						technology.map((tech, i) => {
 							return active === i ? (
-								<img src={tech.images.landscape} key={i} className="img" />
+								<img
+									src={tech.images.landscape}
+									key={i}
+									className="img"
+									alt="Images related to space launches in landscape"
+								/>
 							) : null;
 						})}
 
