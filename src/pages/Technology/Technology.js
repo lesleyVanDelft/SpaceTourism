@@ -4,7 +4,7 @@ import { technology } from '../../data.json';
 import { useSwipeable } from 'react-swipeable';
 import { useMediaQuery } from 'react-responsive';
 import './Technology.css';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion/dist/framer-motion';
 
 const Technology = () => {
 	const [active, setActive] = useState(0);

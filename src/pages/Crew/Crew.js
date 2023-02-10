@@ -3,7 +3,7 @@ import { crew } from '../../data.json';
 import { useState } from 'react';
 import Navigation from '../../components/Navigation/Navigation';
 import { useSwipeable } from 'react-swipeable';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion/dist/framer-motion';
 
 const Crew = () => {
 	const [active, setActive] = useState(0);

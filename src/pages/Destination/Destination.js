@@ -2,7 +2,7 @@ import './Destination.css';
 import { destinations } from '../../data.json';
 import Navigation from '../../components/Navigation/Navigation';
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion/dist/framer-motion';
 
 const Destination = () => {
 	const [active, setActive] = useState('Moon');

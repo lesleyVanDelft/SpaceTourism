@@ -1,6 +1,6 @@
 import './Home.css';
 import Navigation from '../../components/Navigation/Navigation';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion/dist/framer-motion';
 
 const Home = () => {
 	const variants = {
